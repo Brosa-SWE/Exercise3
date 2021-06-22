@@ -8,48 +8,54 @@ namespace Exercise3
 
         static void Main(string[] args)
         {
-            Person person = new Person();
+            //  Part1_CreatePerson();
 
-            List<string> inputValidations = new List<string>();
+            Part2_CreatePersonsViaPersonHandler();
+
+
+        }
+
+        private static void Part2_CreatePersonsViaPersonHandler()
+        {
+            PersonHandler personHandler = new PersonHandler();
+
+            try
+            {
+
+                Person person1 = personHandler.CreatePerson(10, "Kalle", "Kula", 120, 50);
+                Console.WriteLine("Person1a: " + person1.ToString());
+
+                personHandler.SetAge(person1, 30);
+                personHandler.SetFname(person1, "Nisse-Gurra");
+                personHandler.SetLname(person1, "Aktersnurra");
+                personHandler.SetHeight(person1, 180);
+                personHandler.SetWeight(person1, 80);
+
+                Console.WriteLine("Person1b: " + person1.ToString());
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.ReadKey();
+            }
+        }
+
+        private static void Part1_CreatePerson()
+        {
+            Person person = new Person();
 
             try
             {
                 person.Age = 0;
-            }
-            catch (ArgumentException ex)
-            {
-                inputValidations.Add(ex.Message);
-            }
-
-            try
-            {
                 person.Fname = "NisseGurraAkterSnurra";
-            }
-            catch (ArgumentException ex)
-            {
-                inputValidations.Add(ex.Message);
-            }
-
-            try
-            {
                 person.Lname = "HejSvejsILingonSkogen";
             }
             catch (ArgumentException ex)
             {
-                inputValidations.Add(ex.Message);
+                Console.WriteLine(ex.Message);
+                Console.ReadKey();
             }
 
-            // Output
-            if (inputValidations.Count == 0)
-            {
-            Console.WriteLine(person.ToString());
-            }
-            else
-            {
-                Tools.WriteStringListToConsole(inputValidations);
-            }
-
-            Console.ReadKey();
 
         }
     }

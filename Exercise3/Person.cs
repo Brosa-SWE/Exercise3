@@ -20,7 +20,7 @@ namespace Exercise3
             get { return age; }
             set {
 
-                if (age < 1)
+                if (age < 0)
                 {
                     throw new ArgumentException("Age must be more than 0");
                 }
@@ -36,7 +36,7 @@ namespace Exercise3
                 
                 if (!Tools.VerifyStringLength(value, 2, 10))
                 {
-                    throw new ArgumentException("First Name must be between 2-10 characters.");
+                    throw new ArgumentException($"First Name must be between 2-10 characters. ({value}={value.Length})");
                 }
                 
                 fname = value; }
@@ -50,7 +50,7 @@ namespace Exercise3
 
                 if (!Tools.VerifyStringLength(value, 3, 15))
                 {
-                    throw new ArgumentException("Last Name must be between 3-15 characters.");
+                    throw new ArgumentException($"Last Name must be between 3-15 characters. ({value}={value.Length})");
                 }
                 lname = value; }
         }
