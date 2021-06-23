@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Exercise3._2
 {
-    class Dog : Animal
+    class Hedgehog : Animal
     {
-        public string Personality { get; set; }
+        public int NumberOfPins { get; set; }
 
         public override void DoSound()
         {
-            Console.WriteLine("Voff!");
+            Console.WriteLine("Grunt!");
         }
 
         public override string Stats()
         {
-            return ($"{base.Stats()}, Personality: {Personality}");
+            return ($"{base.Stats()}, No of pins: {NumberOfPins}");
         }
+
     }
 }

@@ -10,12 +10,12 @@ namespace Exercise3._2
     {
         public bool Migrating { get; set; }
 
-        protected override void DoSound()
+        public override void DoSound()
         {
             Console.WriteLine("Kvidevitt!");
         }
 
-        protected override string Stats()
+        public override string Stats()
         {
             return ($"{base.Stats()}, Migrating: {Migrating}");
         }

@@ -10,12 +10,12 @@ namespace Exercise3._2
     {
         public string Rank { get; set; }
 
-        protected override void DoSound()
+        public override void DoSound()
         {
             Console.WriteLine("Auuuuuuh!");
         }
 
-        protected override string Stats()
+        public override string Stats()
         {
             return ($"{base.Stats()}, Rank: {Rank}");
         }

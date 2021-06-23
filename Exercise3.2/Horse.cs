@@ -10,12 +10,12 @@ namespace Exercise3._2
     {
         public string Color { get; set; }
 
-        protected override void DoSound()
+        public override void DoSound()
         {
             Console.WriteLine("Gnägg!");
         }
 
-        protected override string Stats()
+        public override string Stats()
         {
             return ($"{base.Stats()}, Color: {Color}");
         }

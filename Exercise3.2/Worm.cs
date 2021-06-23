@@ -8,15 +8,14 @@ namespace Exercise3._2
 {
     class Worm : Animal
     {
-            {
-        public double Length { get; set; }
+       public double Length { get; set; }
 
-        protected override void DoSound()
+        public override void DoSound()
         {
             Console.WriteLine("_____");
         }
 
-        protected override string Stats()
+        public override string Stats()
         {
             return ($"{base.Stats()}, Length: {Length}");
         }
