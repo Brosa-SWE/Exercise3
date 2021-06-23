@@ -36,7 +36,7 @@ namespace Exercise3
                 
                 if (!Tools.VerifyStringLength(value, 2, 10))
                 {
-                    throw new ArgumentException($"First Name must be between 2-10 characters. ({value}={value.Length})");
+                    throw new ArgumentException($"First Name must be between 2-10 chars. ({value}={value.Length} chars)");
                 }
                 
                 fname = value; }
