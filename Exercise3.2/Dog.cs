@@ -19,5 +19,10 @@ namespace Exercise3._2
         {
             return ($"{base.Stats()}, Personality: {Personality}");
         }
+
+        public string GetMagicString()
+        {
+            return "The Magic Dog String from the Dog Class";
+        }
     }
 }

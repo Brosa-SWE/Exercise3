@@ -12,6 +12,7 @@ namespace Exercise3._2
         public string Name { get; set; }
         public double Weight { get; set; }
         public int Age { get; set; }
+       
 
         public abstract void DoSound();
 
@@ -22,7 +23,7 @@ namespace Exercise3._2
 
         public virtual string Stats()
         {
-            return ($"Name: {Name}, Weight: {Weight}, Age: {Age}");
+            return ($"{this.GetType().Name} Name: {Name}, Weight: {Weight}, Age: {Age}");
         }
 
     }

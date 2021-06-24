@@ -12,7 +12,7 @@ namespace Exercise3._2
 
         public override void DoSound()
         {
-            Console.WriteLine("Auuuuuuh!");
+            Console.WriteLine("Aoooooh!");
         }
 
         public override string Stats()

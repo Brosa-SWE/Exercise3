@@ -8,7 +8,7 @@ namespace Exercise3._2
 {
     class Wolfman : Wolf, IPerson
     {
-        public void talk()
+        public void Talk()
         {
             Console.WriteLine("I am what they say I am... I'm a monster.");
         }

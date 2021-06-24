@@ -9,7 +9,7 @@ namespace Exercise3._2
     interface IPerson
     {
 
-        void talk();
+        void Talk();
 
     }
 }
