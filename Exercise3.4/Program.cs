@@ -20,7 +20,12 @@ namespace Exercise3._4
 
         3.4.13
             F: Vad är det för en skillnad på en Abstrakt klass och ett Interface?
-            S: I en Abstrakt klass kan man definera 
+            S: 
+            En klass kan bara ärva från en Abstrakt klass men flera Interface.  
+            En abstrakt klass har en konstruktor och kan innehålla statiska properties och metoder.
+            Alla metoder i ett interface är publika medan en abstrakt klass kan ha olika access modifiers.
+            Ärver man från ett interface måste alla metoder implementeras medans man kan implementera delar av en abstrakt klass, eller inte alls.
+            
         */
 
         static List<UserError> userErrors = new List<UserError>();
