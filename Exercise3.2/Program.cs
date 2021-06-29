@@ -119,9 +119,10 @@ namespace Exercise3._2
             {
                Console.WriteLine(animal.GetType().Name);
 
-                if (animal.GetType().Name == "Person")
-                {
-                    Person person = (Person)animal;
+                if (animal is IPerson)
+                {   
+                    // IPerson handles both Person and Wolfman
+                    IPerson person = (IPerson)animal;
                     person.Talk();
                 }
                 else
@@ -140,6 +141,12 @@ namespace Exercise3._2
             person.Name = "NisseGurra Aktersnurra";
             person.Weight = 0;
             Animals.Add(person);
+
+            Wolfman wolfman = new Wolfman();
+            wolfman.Age = 20;
+            wolfman.Name = "Warewolf";
+            wolfman.Weight = 100;
+            Animals.Add(wolfman);
 
             Bird animal1 = new Bird();
             animal1.Age = 2;
